@@ -1,4 +1,4 @@
-# Self-Assessment: BookCollectionManager.jsx
+# Self-Assessment: ShoppingCart.jsx
 
 ## 1. Functionality
 - **Does the component meet the requirements?**
