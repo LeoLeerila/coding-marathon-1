@@ -1,4 +1,4 @@
-# Self-Assessment: BookCollectionManager.jsx
+# Self-Assessment: ContactListManager.jsx
 
 ## 1. Functionality
 - **Does the component meet the requirements?**
