@@ -122,6 +122,31 @@ body {
   font-size: 14px;
 }
 
+.book-genre {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.book-language {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.book-edition {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.book-pages {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+.book-rating {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
 .delete-button {
   padding: 8px 16px;
   font-size: 14px;
