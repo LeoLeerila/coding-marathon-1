@@ -10,10 +10,19 @@ const Layout = () => {
             <Link to="/">Home</Link>
           </li>
           <li>
-            <Link to="/about">About</Link>
+            <Link to="/books">BookCollectionManager</Link>
           </li>
           <li>
-            <Link to="/contact">Contact</Link>
+            <Link to="/contacts">ContactListManager</Link>
+          </li>
+          <li>
+            <Link to="/recipes">RecipeManager</Link>
+          </li>
+          <li>
+            <Link to="/shoppingcart">ShoppingCart</Link>
+          </li>
+          <li>
+            <Link to="/signup">SignupPage</Link>
           </li>
         </ul>
       </nav>
@@ -26,3 +35,4 @@ const Layout = () => {
 };
 
 export default Layout;
+
