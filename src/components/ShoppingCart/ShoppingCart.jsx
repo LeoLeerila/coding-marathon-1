@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-
+import Itemdata from "./shoppingCartItems"
 function ShoppingCart() {
   const [item, setItem] = useState([]);
   const [name, setName] = useState("");
@@ -64,11 +64,7 @@ function ShoppingCart() {
         <input type="number" placeholder="Enter product Tax %" value={tax} onChange = {handleTaxChange}/>
         <button className="submit_button" onClick={createItemTax}>Add product</button>
       <ol>
-        {item.map((items, id)=>(<li key={id}>
-          <p>{items.name} ({items.brand}) / {items.quat} pcs </p>
-          <p>Cost/Tax = {items.cost}€ / {items.tax}%</p>
-          <button onClick={() => delItem(id)}>Delete</button>
-        </li>))}
+        {item.map((items, id) =>(<Itemdata key={id} items={items} delItem={()=> delItem(id)}/>))}
       </ol>
     </div>
   </div>
