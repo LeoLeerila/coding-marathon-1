@@ -8,12 +8,12 @@ function ShoppingCart() {
   const [cost,setCost] = useState("");
   const [tax,setTax] = useState("");
 
-  //handle change/update Name
+  //handle change/update Name, i know about typo.
   function handelNameChange(event){
     setName(event.target.value);
   };
 
- //handle change/update quantity, i know about typo.
+ //handle change/update quantity
   function handleQuatChange(event){
     setQuat(event.target.value);
   };
@@ -52,7 +52,7 @@ function ShoppingCart() {
     setItem(updItem)
   };
 
-  // both inputs, add/del button
+  // all inputs, add/del button
   return (
     <div className="shoppingCart">
       <h1>Shopping Cart</h1>
