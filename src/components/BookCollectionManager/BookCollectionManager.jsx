@@ -26,7 +26,7 @@ function BookCollectionManager() {
   function handleGenreChange(event) {
     setGenre(event.target.value);
   }
-
+  // Same thing as above but for the rest of the fields
   function handleLanguageChange(event) {
     setLanguage(event.target.value);
   }
@@ -62,7 +62,7 @@ function BookCollectionManager() {
     const updatedBooks = books.filter((_, i) => i !== index);
     setBooks(updatedBooks);
   }
-
+  //HTML section
   return (
     <div className="app-container">
       <h1>Book Collection Manager</h1>
@@ -150,19 +150,3 @@ function BookCollectionManager() {
 }
 
 export default BookCollectionManager;
-{/*}
-             <li key={index} className="book-item">
-                <div className="book-info">
-                  <span className="book-title">{book.title}</span>
-                  <span className="book-author">by {book.author}</span>
-                  <span className="book-genre">{book.genre}</span>
-                  <span className="book-language">{book.language}</span>
-                </div>
-                <button
-                  onClick={() => deleteBook(index)}
-                  className="delete-button"
-                >
-                  Delete
-                </button>
-              </li>
-*/}
