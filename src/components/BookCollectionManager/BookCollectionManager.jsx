@@ -45,7 +45,7 @@ function BookCollectionManager() {
 
   // Add a new book to the list
   function addBook() {
-    if (title.trim() !== "" && author.trim() !== "") {
+    if (title.trim() !== "" && author.trim() !== "" && genre.trim() !== "" && language.trim() !== "" && edition.trim() !== "" && pages.trim() !== "" && rating.trim() !== "") {
       setBooks((b) => [...b, { title, author, genre, language, edition, pages, rating }]);
       setTitle("");
       setAuthor(""); // Clear the input fields
