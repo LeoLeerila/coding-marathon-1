@@ -6,12 +6,14 @@ function RecipeManager() {
   const [recipes, setRecipes] = useState([]);
   const [newRecipe, setNewRecipe] = useState({ name: "", ingredients: "", cuisine: "", difficulty: "", cookTime: "", servings: "", allergens: "" });
 
+  //take the target, and apply any possible changes on the already existing array without overwriting any other inputs.
   function handleInputChange(event) {
     const { name, value } = event.target;
     setNewRecipe((prevRecipe) => ({ ...prevRecipe, [name]: value }));
   }
 
   function addRecipe() {
+    //checks to make sure the name or the ingredients fields are not empty before proceeding.
     if (newRecipe.name.trim() !== "" && newRecipe.ingredients.trim() !== "") {
       setRecipes((r) => [...r, newRecipe]);
       setNewRecipe({ name: "", ingredients: "", cuisine: "", difficulty: "", cookTime: "", servings: "", allergens: "" });
@@ -80,7 +82,10 @@ function RecipeManager() {
         <button className="add-btn" onClick={addRecipe}>Add Recipe</button>
       </div>
       <ol className="recipe-output">
+        {/* Map out each item within 'recipes' array*/}
         {recipes.map((recipe, index) => (
+          //An arrow function seemed to work wonders to make the delete function actually function. Before that, 
+          // 'deleteRecipe' would not be able to take parameters without bricking the entire website.
           <Recipe key={index} recipe={recipe} onDel={() => deleteRecipe(index)}/>
         ))}
       </ol>
